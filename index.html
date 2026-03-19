@@ -4,25 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guilherme Oliveira</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="particulas"></div>
     <nav class="navegacao">
-        <ul>
+        <ul class="menu">
             <li>
-                <a href="index.html">Início</a>
+                <a href="index.html" class="menu-link">Início</a>
             </li>
             <li>
-                <a href="sobre.html">Sobre</a>
+                <a href="sobre.html" class="menu-link">Sobre</a>
             </li>
             <li>
-                <a href="projetos.html">Projetos</a>
+                <a href="projetos.html" class="menu-link">Projetos</a>
             </li>
              <li>
-                <a href="contato.html">Contato</a>
+                <a href="contato.html" class="menu-link">Contato</a>
             </li>
         </ul>
 
     </nav>
-    
+
+    <main id="Inicio" class="cabecalho">
+            <img src="imgs/guilhherme.png" alt="Foto de Guilherme Oliveira" class="foto-perfil">
+            <h1>Guilherme Oliveira</h1>
+            <p>Desenvolvedor Full Stack Em Formação</p>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">Sou um desenvolvedor web apaixonado por criar soluções inovadoras e eficientes. Com experiência em HTML, CSS, JavaScript e diversas bibliotecas e frameworks, estou sempre buscando aprender e aprimorar minhas habilidades para entregar projetos de alta qualidade.
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+
+            <div class="projetos-card">
+                <img src="imgs/gestaofinanc_prototipo.png" alt="Imagem do Projeto 1" class="projeto-imagem">
+                <div class="caixa-texto-projetos">
+                    <h3 class="info-projetos">Projeto 1: Portfólio Pessoal</h3>
+                    <p class="paragrafo-projetos">Desenvolvi um portfólio pessoal para exibir meus projetos e habilidades. O site é responsivo e utiliza HTML, CSS e JavaScript para criar uma experiência de usuário agradável.            
+                    </p>
+                </div>
+            </div>
+            <div class="projetos-card">
+                <img src="imgs/devsflix_prototipo.png" alt="Imagem do Projeto 2" class="projeto-imagem">
+                <div class="caixa-texto-projetos">
+                     <h3 class="info-projetos">Projeto 2: Aplicação de Tarefas</h3>
+                    <p class="paragrafo-projetos">Criei uma aplicação de tarefas usando React para ajudar os usuários a organizar suas atividades diárias. A aplicação permite adicionar, editar e excluir tarefas, além de marcar como concluídas
+                    </p>
+                </div>
+            </div>
+            <div class="projetos-card">
+                <img src="imgs/template_prototipo.png" alt="Imagem do Projeto 3" class="projeto-imagem">
+                <div class="caixa-texto-projetos">
+                    <h3 class="info-projetos">Projeto 3: Blog Pessoal</h3>
+                    <p class="paragrafo-projetos">Desenvolvi um blog pessoal utilizando Node.js e Express para o backend, e EJS para o frontend. O blog permite aos usuários criar, editar e excluir postagens, além de comentar nas publicações.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contatos" class="contato">
+        <h2 class="contatos-titulo">Entre em contato </h2>
+        <form class="formulario-contato" id="formulario">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form">
+            </div>
+            
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Escreva sua mensagem aqui..."></textarea>
+            </div>
+            <button type="submit" class="botao-form">Enviar Whatsapp</button>
+        </form>
+    </section>
+
 </body>
 </html>
