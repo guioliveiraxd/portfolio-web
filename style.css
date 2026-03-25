@@ -22,6 +22,21 @@ body {
     color: var(--claro);
     
 }
+
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ffffff30;
+    backdrop-filter: invert(1);
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.2s ease;
+    transform: translate(-50%, -50%);
+}
 .navegacao {
     position: fixed;
     top: 0;
@@ -234,5 +249,11 @@ h1 {
     
     50% {
         transform: translateY(-20px);
+    }
+}
+
+@media (max-width: 767px) {
+    .cursor {
+        display: none;
     }
 }
