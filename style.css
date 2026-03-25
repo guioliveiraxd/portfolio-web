@@ -8,6 +8,11 @@ html {
     scroll-behavior: smooth;
 }
 
+main,
+section {
+    scroll-margin-top: 110px;
+}
+
 :root {
     --primaria: #4f46e5;
     --secundaria: #7c3aed;
