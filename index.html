@@ -34,6 +34,29 @@
                 <a href="#contatos" class="menu-link">Contato</a>
             </li>
         </ul>
+        
+        <!-- Botão Theme Toggle -->
+        <button 
+            id="theme-toggle" 
+            class="theme-toggle" 
+            aria-label="Alternar entre modo claro e escuro"
+            title="Modo claro/escuro"
+        >
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+        </button>
     </nav>
 
     <header id="inicio" class="cabecalho" role="banner">
@@ -46,9 +69,41 @@
         <h1 class="cabecalho-titulo">Guilherme Oliveira</h1>
         <p class="cabecalho-subtitulo">Desenvolvedor <span class="destaque">Full Stack</span> em Formação</p>
         <p class="cabecalho-descricao">Criando soluções web inovadoras e escaláveis</p>
-    </header>
 
-    <section id="sobre" class="sobre">
+        <!-- Carrossel de Tecnologias - Aparece no Hero -->
+        <div class="tech-carousel">
+            <div class="tech-fade-left"></div>
+            <div class="tech-track">
+                <span class="tech-item">C</span>
+                <span class="tech-item">Python</span>
+                <span class="tech-item">SQL</span>
+                <span class="tech-item">HTML5</span>
+                <span class="tech-item">CSS3</span>
+                <span class="tech-item">JavaScript</span>
+                <span class="tech-item">TypeScript</span>
+                <span class="tech-item">React</span>
+                <span class="tech-item">Node.js</span>
+                <span class="tech-item">PHP</span>
+                <span class="tech-item">Git</span>
+                <span class="tech-item">Linux</span>
+                
+                <!-- Duplicado para loop infinito -->
+                <span class="tech-item">C</span>
+                <span class="tech-item">Python</span>
+                <span class="tech-item">SQL</span>
+                <span class="tech-item">HTML5</span>
+                <span class="tech-item">CSS3</span>
+                <span class="tech-item">JavaScript</span>
+                <span class="tech-item">TypeScript</span>
+                <span class="tech-item">React</span>
+                <span class="tech-item">Node.js</span>
+                <span class="tech-item">PHP</span>
+                <span class="tech-item">Git</span>
+                <span class="tech-item">Linux</span>
+            </div>
+            <div class="tech-fade-right"></div>
+        </div>
+    </header>
         <div class="container">
             <h2 class="section-titulo">Sobre mim</h2>
             <div class="sobre-caixa">
@@ -58,13 +113,6 @@
                     estou sempre buscando aprender e aprimorar minhas habilidades para entregar 
                     projetos de <strong>alta qualidade</strong> e impacto real.
                 </p>
-                <div class="skills-lista">
-                    <span class="skill-badge">HTML5</span>
-                    <span class="skill-badge">CSS3</span>
-                    <span class="skill-badge">JavaScript</span>
-                    <span class="skill-badge">React</span>
-                    <span class="skill-badge">Node.js</span>
-                    <span class="skill-badge">Express</span>
                 </div>
             </div>
         </div>

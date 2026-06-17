@@ -1,4 +1,58 @@
 /* ============================================================================
+   THEME MANAGEMENT
+   ============================================================================ */
+
+/**
+ * Initialize theme system on page load
+ */
+function initTheme() {
+	const savedTheme = localStorage.getItem('theme-preference');
+	const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+	const theme = savedTheme || (prefersDark ? 'dark' : 'dark'); // Default to dark
+	applyTheme(theme);
+}
+
+/**
+ * Apply theme to document
+ * @param {string} theme - 'light' or 'dark'
+ */
+function applyTheme(theme) {
+	if (theme === 'light') {
+		document.documentElement.setAttribute('data-theme', 'light');
+		localStorage.setItem('theme-preference', 'light');
+	} else {
+		document.documentElement.removeAttribute('data-theme');
+		localStorage.setItem('theme-preference', 'dark');
+	}
+}
+
+/**
+ * Toggle between light and dark themes
+ */
+function toggleTheme() {
+	const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+	const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+	applyTheme(newTheme);
+}
+
+/**
+ * Setup theme toggle button
+ */
+function setupThemeToggle() {
+	const themeToggle = document.getElementById('theme-toggle');
+	if (themeToggle) {
+		themeToggle.addEventListener('click', toggleTheme);
+		// Add keyboard support (Space/Enter)
+		themeToggle.addEventListener('keydown', (e) => {
+			if (e.key === ' ' || e.key === 'Enter') {
+				e.preventDefault();
+				toggleTheme();
+			}
+		});
+	}
+}
+
+/* ============================================================================
    FORM VALIDATION & UTILITIES
    ============================================================================ */
 
@@ -305,4 +359,19 @@ if ('IntersectionObserver' in window) {
 	document.querySelectorAll('img[data-src]').forEach((img) => {
 		imageObserver.observe(img);
 	});
+}
+
+/* ============================================================================
+   INITIALIZATION ON DOM READY
+   ============================================================================ */
+
+if (document.readyState === 'loading') {
+	document.addEventListener('DOMContentLoaded', () => {
+		initTheme();
+		setupThemeToggle();
+	});
+} else {
+	// DOM já foi carregado
+	initTheme();
+	setupThemeToggle();
 }
